@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html amp lang="id-ID">
+    <head>
+
+        <!-- TITLE -->
+
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset="UTF-8" />
+        <title>SIMPLE CSS MOBILE CLOAKING</title>
+        <meta name="description" content="Simple CSS MOBILE Cloaking Using Responsive Media Query." />
+        <link rel="canonical" href="#" />
+        <link rel="icon" type="image/png" href="" />
+
+        <!-- STYLE -->
+
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overflow-y: hidden;
+                box-sizing: border-box;
+            }
+
+            .desktop-version {
+                display: block;
+                width: 100%;
+                height: 1000px;
+            }
+
+            .mobile-version {
+                display: none;
+                width: 100%;
+                height: 1000px;
+            }
+
+            @media (max-width: 768px) {
+                .desktop-version {
+                    display: none;
+                }
+
+                .mobile-version {
+                    display: block;
+                }
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="desktop-version">
+            <iframe width="100%" height="1000px" frameborder="0" src="https://amp.dev/"></iframe>
+        </div>
+        <div class="mobile-version">
+            <iframe width="100%" height="1000px" frameborder="0" src="https://en.wikipedia.org/wiki/Cloaking"></iframe>
+        </div>
+    </body>
+</html>
